@@ -1,0 +1,95 @@
+### day0
+
+-   install npm
+-   install nodejs
+-   chrome console
+-   IDE
+
+* * * * *
+
+### day1
+
+-   the external script link can be on the header or body, but it is preferred to put it in the body.
+    - WHY? because HEADER rendered before BODY
+    - if put script in HEADER, it can't access the DOM because they are not loaded ok
+    - this can fix:  <header>window.onload = function(){...}</header>
+    - use defer: \<script src="test.js" defer>\</script>
+-   array
+    -   let arr = []  // good
+    -   const arr = [] // good
+        -   you can't reassign value to a const,  arr = [] will panic
+        -   but something like "arr.push(1),  arr[0] = 2, arr.length=20" will work
+    -   never use "let arr = new Array()"
+        -   The only time you ever want to use new Array(), and not [], is when you want to have a large, empty array
+            -   even in this situation, you can always do "arr.length=999"
+-   declaring variables without keyword
+    -   not good, it will be global variable, even if it's in function
+        -   test1.js
+            -   (function() {a=1; var b=2})()
+        -   test2.js
+            -   typeof a // number
+            -   typeof b // undefined
+-   array method
+    -   shift, unshift
+    -   push, pop
+    -   indexOf, lastIndexOf
+    -   isArray
+    -   arr1.concat(arr2)
+    -   Array(8).fill(0)
+    -   slice
+        -   same like other language
+        -   will copy
+    -   splice(start, removeCount, ...itemToAppend)
+-   loop
+    -   do while
+        -   do {...} while (condition)
+        -   Do while run at least once if the condition is true or false
+    -   for (const n of nums) {...}
+    -   for in
+        -   for (const key in objectMap) { console.log(key, objectMap[key]) }
+-   scope
+    -   A variable declared with var only scoped to function but variable declared with let or const is block scope(function block, if block, loop etc)
+-   object
+    -   person = {name: "lc",  getFullName: function() {return "MyFullName"} }
+    -   person.getMoreInfo = function() {}
+    -   copyPerson = Object.assign({}, person)
+        -   To copy an object without modifying the original object
+    -   Object.entries:To get the keys and values in an array
+    -   Object.keys(copyPerson)
+    -   Object.values(copyPerson)
+    -   copyPerson.hasOwnProperty('name')
+-   high order function
+    -   setInterval
+        -   setInterval(sayHello, 2000) // it prints hello in every 2 seconds
+    -   setTimeout
+        -   setTimeout(sayHello, 2000) // it prints hello after it waits for 2 seconds.
+    -   TODO:
+        -   <https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript>
+-   destructure
+    -   const rectangle = { w: 20, h: 10 }
+    -   const calculateArea = ({ w, h }) => w * h
+        -   "w, h" must same with object key
+-   spread
+    -   const copiedUser = { ...user } // copy object, same as Object.assign
+    -   const fullStack = [...frontEnd, ...backEnd] // concat two array
+    -   const copiedUser = { ...user, title: 'instructor' } // change already exists title
+-   functinal programming
+    -   forEach
+    -   map, reduce, filter
+    -   find, findIndex
+        -   filterFirst, filterFirstButReturnIndex
+    -   some, every
+        -   any, all
+-   class
+    -   constructor(name, age=55) {this.name=name}
+        -   __init__
+    -   getter
+        -   get getScore(...) {return ..}
+            -   obj.getScore
+            -   @property
+    -   setter
+        -   set setScore(...) {}
+            -   obj.setScore = 33
+    -   static doSomething() {}
+        -   ClassItSelf.doSomething()
+        -   @classmethod
