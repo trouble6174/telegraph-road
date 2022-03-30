@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Day2</title>
+</head>
+<body>
+<div class="root"></div>
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const n1 = 1
+    const n2 = 2
+    const techs = ["HTML", "CSS", "JavaScript", "Smile"]
+    const jsxHeader = (
+        <header>
+            <h1>Learn React Day2</h1>
+            <h3>at least we started</h3>
+            <small>2022/3/30</small>
+        </header>
+    )
+    const jsxMain = (
+        <main>
+            <p>Prerequisite to get started React.js:</p>
+            <ul>
+                {techs.map(x=><li>{x}</li>)}
+            </ul>
+            <div>
+                <p>
+                    {n1}+{n2} = {n1 + n2}
+                </p>
+            </div>
+        </main>
+    )
+    const jsxFooter = (
+        <footer>
+            <p>Solitude is my strength</p>
+        </footer>
+    )
+    const app = (
+        <div className="container">
+            {jsxHeader}
+            {jsxMain}
+            {jsxFooter}
+        </div>
+    )
+    const rootElement = document.querySelector('.root')
+    ReactDOM.render(app, rootElement)
+</script>
+</body>
+</html>

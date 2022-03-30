@@ -1,0 +1,45 @@
+.container {
+    width: 70%;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #0066FF;
+}
+
+header {
+    color: white;
+    height: 25vh;
+    border-width: 10px;
+    border-style: groove;
+    border-color: #555;
+    text-align: center;
+    line-height: 80px;
+}
+
+main {
+    color: white;
+    margin-top: 100px;
+    text-align: center;
+    font-family: Algerian, sans-serif;
+    height: 70vh;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: armenian;
+    margin-left: -5%;
+}
+
+li span {
+    position: relative;
+    left: 5px;
+}
+
+footer {
+    text-align: center;
+    color: darkgrey;
+    font-family: Calibri, sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+    height: 5em;
+}
