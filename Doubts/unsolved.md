@@ -9,3 +9,6 @@
 ### JavaScript
 
 1. how to create an accurate timer?
+2. what is a Symbol? 
+   - print module in console {Symbol(Symbol.toStringTag): 'Module'}
+3. ...
