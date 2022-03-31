@@ -4,6 +4,7 @@
 3. how to center text vertical?
 4. what is viewport?
 5. difference between px, em, vh, ...etc.
+6. why there are some random margin/padding when not set "* {margin:0; padding:0}" ?
 ---
 
 ### JavaScript

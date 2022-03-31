@@ -7,17 +7,16 @@ import htmlLogoImage from './images/html_logo.png'
 import avatarImage from './images/avatar400.png'
 
 const ex1 = (
-    <div className="ex1">
-        <div className="ex1-title">Front End Technologies</div>
-        <div className="ex1-logo">
+    <article className="ex1">
+        <h4 className="ex1-title">Front End Technologies</h4>
+        <article className="ex1-logo">
             <img src={cssLogoImage} alt="css"/>
             <img src={jsLogoImage} alt="js"/>
             <img src={htmlLogoImage} alt="html"/>
             <img src={reactLogoImage} alt="react"/>
-        </div>
-    </div>
+        </article>
+    </article>
 )
-
 
 const ex2Description = "Sign up with your email address to receive news and updates"
 const ex2 = (
@@ -49,7 +48,7 @@ const ex3 = (
         <div className="ex3-title">{ex3Title}</div>
         <div className="ex3-skills-title">SKILLS</div>
         <div className="ex3-skills">
-            {mySkills.map(x => <button>{x}</button>)}
+            {mySkills.map(x => <button key={x}>{x}</button>)}
         </div>
         <div className="ex3-footer">{ex3Date}</div>
     </div>

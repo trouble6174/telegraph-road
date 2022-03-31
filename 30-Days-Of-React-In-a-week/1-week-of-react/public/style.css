@@ -1,40 +1,49 @@
-html, body, .container, #root {
-    height: 100%;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    height: 100%;
-    width: 100%;
-    margin: 0;
+html, body, .container, #root {
+    min-height: 100vh;
 }
+
 
 .ex1,
 .ex2,
 .ex3 {
-    margin: 0 auto;
-    width: 80%;
-    height: 33.33%;
+    margin: auto;
+    width: 80vw;
+    height: 30vh;
     background-color: #f0f1f7;
+}
+
+.ex2, .ex3 {
+    margin-top: 5vh;
+}
+
+article {
+    display: block;
 }
 
 
 .ex1-title {
+    font-size: x-large;
     font-family: Calibri, serif;
     font-weight: bolder;
     text-align: center;
-    font-size: 1.5vw;
+    padding: 15px 0;
 }
 
 .ex1-logo {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-around;
 }
 
-.ex1 .ex1-logo img {
-    padding-top: 10%;
-    max-width: 12%;
-    max-height: 12%;
+.ex1-logo img {
+    display: block;
+    max-width: 12vw;
+    max-height: 12vh;
+    margin: 4vh auto;
 }
 
 
@@ -96,7 +105,7 @@ html, body, .container, #root {
 }
 
 .avatar {
-    padding-top: 2%;
+    /*padding-top: 2%;*/
     width: 40%;
     height: 40%;
 }
