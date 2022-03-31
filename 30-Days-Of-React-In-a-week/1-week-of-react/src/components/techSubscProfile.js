@@ -3,8 +3,6 @@ import jsLogoImage from '../images/javascript_logo.png'
 import reactLogoImage from '../images/react_logo.png'
 import htmlLogoImage from '../images/html_logo.png'
 import avatarImage from '../images/avatar400.png'
-import React from "react";
-
 
 const FrontEndTechComponent = (props) => {
     const {css, js, react, html} = props.data.url

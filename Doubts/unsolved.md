@@ -13,3 +13,9 @@
 2. what is a Symbol? 
    - print module in console {Symbol(Symbol.toStringTag): 'Module'}
 3. ...
+
+---
+
+### React 
+1. export, export default, export multi
+2. Each child in a list should have a unique "key" prop
