@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-html, body, .container {
+html, body, .hexContainer {
     min-height: 100vh;
 }
 

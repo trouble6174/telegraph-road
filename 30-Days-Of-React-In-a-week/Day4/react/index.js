@@ -6,8 +6,8 @@ import reactLogoImage from './images/react_logo.png'
 import htmlLogoImage from './images/html_logo.png'
 import avatarImage from './images/avatar400.png'
 
-const ex1 = (
-    <article className="ex1">
+const FrontEndTechComponent = () => (
+    <div className="ex1">
         <h4 className="ex1-title">Front End Technologies</h4>
         <article className="ex1-logo">
             <img src={cssLogoImage} alt="css"/>
@@ -15,11 +15,11 @@ const ex1 = (
             <img src={htmlLogoImage} alt="html"/>
             <img src={reactLogoImage} alt="react"/>
         </article>
-    </article>
+    </div>
 )
 
 const ex2Description = "Sign up with your email address to receive news and updates"
-const ex2 = (
+const SubscribeComponent = () => (
     <div className="ex2">
         <div className="ex2-inner">
             <div className="ex2-title">SUBSCRIBE</div>
@@ -39,7 +39,7 @@ const ex3Title = "Unemployed, Cruel China"
 const ex3Date = "Joined on Mar 30, 2022"
 const mySkills = ["Python", "JavaScript", "Golang", "Django", "FastApi", "Docker",
     "Kubernetes", "CSS", "Regex", "SQL", "Linux", "React", "Git", "Aiohttp", "Grafana"]
-const ex3 = (
+const ProfileComponent = () => (
     <div className="ex3">
         <div className="avatar">
             <img src={avatarImage} alt="avatar"/>
@@ -54,13 +54,16 @@ const ex3 = (
     </div>
 )
 
-const app = (
-    <div className="hexContainer">
-        {ex1}
-        {ex2}
-        {ex3}
-    </div>
-)
+function App() {
+    return (
+        <div className="hexContainer">
+            <FrontEndTechComponent/>
+            <SubscribeComponent/>
+            <ProfileComponent/>
+        </div>
+    )
+}
+
 const rootElement = document.getElementById('root')
 const root = ReactDOMClient.createRoot(rootElement)
-root.render(app)
+root.render(<App/>)

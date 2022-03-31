@@ -1,0 +1,23 @@
+.hexContainer {
+    width: 70vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.hexContainer .hex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #0066FF;
+    width: 100%;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    font-size: 5vw;
+    font-family: Algerian, sans-serif;
+    color: #FFFFFF;
+}
