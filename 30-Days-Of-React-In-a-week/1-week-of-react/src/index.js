@@ -13,5 +13,6 @@ const root = ReactDOMClient.createRoot(rootElement)
 
 
 // root.render(<TechApp/>)
-// root.render(<HexColorGenerator title="Hexadecimal Colors"/>)
-root.render(<TopPopulation/>)
+root.render(<HexColorGenerator title="Hexadecimal Colors"/>)
+// root.render(<TopPopulation/>)
+// root.render(<NumGenerator title="Number Generator"/>)
