@@ -1,0 +1,67 @@
+.hexContainer {
+    width: 70vw;
+    max-width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.hexContainer .title {
+    margin-top: 10vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 5vh;
+    font-family: "Arial Narrow",sans-serif;
+}
+
+.hexContainer .desc {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 3vh;
+    color: #555555;
+    font-family: "Arial Narrow",sans-serif;
+}
+
+.grid-container {
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-cell{
+    background-color: chartreuse;
+    border: white solid 1px;
+    aspect-ratio: 1;
+    color: #FFFFFF;
+    font-size: 1.8vh;
+    font-family: Calibri, sans-serif;
+    text-shadow: 2px 2px #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.action button {
+    background-color: #83E1F8;
+    padding: 1% 4%;
+    font-size: 3vh;
+    font-family: Calibri, sans-serif;
+    color: #FFFFFF;
+    border: #FFFFFF;
+    border-radius: 10px;
+    cursor: pointer;
+}
