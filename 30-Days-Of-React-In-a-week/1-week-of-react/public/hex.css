@@ -47,3 +47,21 @@
     align-items: center;
     justify-content: center;
 }
+
+.action {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.action button {
+    background-color: #83E1F8;
+    padding: 1% 4%;
+    font-size: 3vh;
+    font-family: Calibri, sans-serif;
+    color: #FFFFFF;
+    border: #FFFFFF;
+    border-radius: 10px;
+    cursor: pointer;
+}

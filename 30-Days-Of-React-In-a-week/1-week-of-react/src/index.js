@@ -16,3 +16,38 @@ const root = ReactDOMClient.createRoot(rootElement)
 root.render(<HexColorGenerator title="Hexadecimal Colors"/>)
 // root.render(<TopPopulation/>)
 // root.render(<NumGenerator title="Number Generator"/>)
+//
+//
+// class App extends React.Component {
+//
+//
+//     state = {
+//         imagex: 0,
+//     }
+//
+//     render() {
+//         // accessing the state value
+//         const count = this.state.imagex
+//         return (
+//             <div className='App'>
+//                 <h1>{count} </h1>
+//
+//                 <div>
+//                     <button
+//                         onClick={() => this.setState({imagex: this.state.imagex + 1})}
+//                     >
+//                         Add One
+//                     </button>
+//                     {' '}
+//                     <button
+//                         onClick={() => this.setState({imagex: this.state.imagex - 1})}
+//                     >
+//                         Minus One
+//                     </button>
+//                 </div>
+//             </div>
+//         )
+//     }
+// }
+//
+// root.render(<App/>)

@@ -19,3 +19,4 @@
 ### React 
 1. export, export default, export multi
 2. Each child in a list should have a unique "key" prop
+3. Is there a better way to use memo in Day8's exercise
