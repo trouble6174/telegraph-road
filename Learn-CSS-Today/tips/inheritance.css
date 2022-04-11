@@ -1,0 +1,24 @@
+.div-default {
+    color: red;
+    border: 1px solid black;
+}
+
+.div-inherit {
+    color: red;
+    border: 1px solid black;
+}
+
+.div-inherit p {
+    color: inherit;
+    border: inherit;
+}
+
+.div-not-inherit {
+    color: red;
+    border: 1px solid black;
+}
+
+.div-not-inherit p {
+    color: initial;
+    border: initial;
+}
