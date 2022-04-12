@@ -1,0 +1,20 @@
+h1 {
+    text-align: center;
+}
+
+.hobby, .language {
+    background-color: green;
+    color: #FFFFFF;
+}
+
+.hobby ul li:first-child,
+.language ol li:first-child,
+.band ol li:first-child {
+    color: #83E1F8;
+}
+
+.band ol li:last-child {
+    text-decoration-line: line-through;
+}
+
+
