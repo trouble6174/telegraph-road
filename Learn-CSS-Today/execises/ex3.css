@@ -1,11 +1,8 @@
-* {
-    box-sizing: border-box;
-}
-
 .ipt {
     padding: .2em;
-    margin: .5em 0;
+    margin: .25rem;
     outline: none;
+    font-size: inherit; /* input default font size is SMALLER than page, inherit makes it same with the page font size */
     border: 1px solid hsl(0, 0%, 70%);
     border-radius: .2em;
 }
@@ -20,25 +17,25 @@
 }
 
 .ipt.ipt-success:hover, .ipt.ipt-success:focus {
-    border: 1px solid hsl(112, 100%, 30%);
+    border-color: hsl(112, 100%, 30%);
     box-shadow: 0 0 5px 0 hsl(112, 100%, 40%);
 }
 
 .ipt.ipt-error {
-    border: 1px solid hsl(0, 60%, 50%);
+    border-color: hsl(0, 60%, 50%); /* only change color, the rest is the same*/
 }
 
 .ipt.ipt-error:hover, .ipt.ipt-error:focus {
-    border: 1px solid hsl(0, 60%, 40%);
+    border-color: hsl(0, 60%, 40%);
     box-shadow: 0 0 5px 0 hsl(0, 60%, 50%);
 }
 
 .ipt.ipt-large {
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 
 .ipt.ipt-small {
-    font-size: .7rem;
+    font-size: .75rem;
 }
 
 .ipt:disabled {
