@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+.ipt {
+    padding: .2em;
+    margin: .5em 0;
+    outline: none;
+    border: 1px solid hsl(0, 0%, 70%);
+    border-radius: .2em;
+}
+
+.ipt:hover, .ipt:focus {
+    border: 1px solid hsl(0, 0%, 20%);
+    box-shadow: 0 0 5px 0 hsl(0, 0%, 70%);
+}
+
+.ipt.ipt-success {
+    border: 1px solid hsl(112, 100%, 40%);
+}
+
+.ipt.ipt-success:hover, .ipt.ipt-success:focus {
+    border: 1px solid hsl(112, 100%, 30%);
+    box-shadow: 0 0 5px 0 hsl(112, 100%, 40%);
+}
+
+.ipt.ipt-error {
+    border: 1px solid hsl(0, 60%, 50%);
+}
+
+.ipt.ipt-error:hover, .ipt.ipt-error:focus {
+    border: 1px solid hsl(0, 60%, 40%);
+    box-shadow: 0 0 5px 0 hsl(0, 60%, 50%);
+}
+
+.ipt.ipt-large {
+    font-size: 1rem;
+}
+
+.ipt.ipt-small {
+    font-size: .7rem;
+}
+
+.ipt:disabled {
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(0, 0%, 50%);
+}
