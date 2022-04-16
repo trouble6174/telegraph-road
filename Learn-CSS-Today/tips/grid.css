@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-container, .right-container, .mid-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.left, .right, .mid {
+    margin-bottom: 2vh;
+    font-size: 2rem;
+}
+
+.left span {
+    border: 1px solid #555555;
+    color: green;
+    background-color: grey;
+}
+
+.mid span {
+    border: 1px solid #555555;
+    color: red;
+    background-color: grey;
+}
+
+.right span {
+    border: 1px solid #555555;
+    color: yellow;
+    background-color: grey;
+}
+
+.area1 {
+    display: grid;
+    grid-template-columns: 100px 50px; /* all columns change*/
+    grid-template-rows: 50px 100px; /* only work for first two rows */
+}
+
+.area2 {
+    display: grid;
+    grid-template-columns: 100px 50px;
+    grid-auto-rows: 50px 100px; /* more intuitive */
+}
+
+.area3 {
+    display: grid;
+    grid-template-columns: 100px 50px 50px;
+    grid-auto-rows: 75px 75px;
+    grid-template-areas:
+    "head head head"
+    "head head head"
+    "side content content";
+}
+
+/* each area:type can only have one instance */
+.area3 span:nth-of-type(1) {
+    grid-area: content;
+}
+
+.area3 span:nth-of-type(2) {
+    grid-area: head;
+}
+
+.area3 span:nth-of-type(7) {
+    grid-area: side;
+}
+
+.area4 {
+    display: grid;
+    grid-template-columns: 100px 50px 75px;
+    grid-template-rows: 50px 100px;
+}
+
+.area4 span:nth-of-type(1) {
+    grid-column-start: 1;
+    grid-column-end: 4; /* grid1 will fill cell 1, 2, 3, no 4 */
+    /*grid-column: 1/4;  !* do the same thing *!*/
+    /*grid-column: 1/-1;  !* do the same thing *!*/
+    grid-row: 1/3;
+}
+
+.area5 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    row-gap: 1px;
+    column-gap: 2px;
+}
+
+.area6 {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(3, minmax(100px, auto));
+    justify-content: end;
+}
+
+.area7 {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, 100px);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.area7 span:nth-of-type(1) {
+    grid-column: span 2;
+}
+
+.area7 span:nth-of-type(2) {
+    grid-column: span 2;
+}

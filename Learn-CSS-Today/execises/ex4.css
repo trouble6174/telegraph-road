@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #555;
+    color: whitesmoke;
+    height: 10vh;
+    font-size: 5vh;
+    padding: .8rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    min-width: 35vw;
+}
+.menu span {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    padding: 1rem;
+}
+.menu span:hover {
+    background-color: #888;
+}
