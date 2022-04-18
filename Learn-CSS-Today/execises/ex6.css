@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: .2rem;
+    background-color: #333;
+    display: grid;
+    align-items: stretch;
+    grid-auto-flow: dense;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: 200px;
+}
+
+img {
+    max-width: 100%;
+    min-width: 200px;
+    border: 1px solid grey;
+    cursor: pointer;
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+.tall {
+    grid-row: span 2;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+img:hover {
+    opacity: 0.6;
+    background-color: black;
+}
