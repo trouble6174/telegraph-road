@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    width: 100vw;
+    min-height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav.title {
+    min-width: 300px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding-left: 5vw;
+}
+
+.nav.menu {
+    min-width: 300px;
+    width: 30vw;
+    display: grid;
+    grid-template-columns: minmax(30px, 1.5fr) minmax(50px, 50px) minmax(50px, 50px);
+    gap: 2px;
+    padding: 10px;
+}
+
+
+.body-container {
+    display: flex;
+    width: 100vw;
+    min-height: 90vh;
+}
+
+.left.project {
+    min-width: 20vw;
+    display: grid;
+    gap: 10px;
+    align-content: start;
+    padding-top: 5vh;
+    padding-left: 5vw;
+}
+
+.left.project > * {
+    font-size: 1.2rem;
+    justify-self: start;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.left.project > :last-child {
+    margin-top: 1rem;
+    padding-left: 5px;
+    align-self: center;
+}
+
+.left.project span:nth-child(1) {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main {
+    min-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30vw;
+    padding-top: 5vh;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.main-title-header {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.main-title-desc {
+    font-size: 1.2rem;
+}
+
+.main .content-add {
+    padding-top: 10px;
+}
+
+.main {
+    min-width: 10vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30vw;
+    padding-top: 5vh;
+}
+
+.footer {
+    min-height: 5vh;
+    min-width: 50vw;
+    width: 50vw;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 911px) {
+    .left.project {
+        display: none;
+    }
+
+    .main {
+        min-width: 100vw;
+    }
+
+    .nav.menu {
+        gap: 0;
+        padding: 0;
+    }
+
+    .footer {
+        gap: 0;
+    }
+}
