@@ -7,7 +7,7 @@ router.get('/events', async function (req, res) {
     let data = []
     try {
         if (req.query["get_latest"] === "true") {
-            data = await EventModel.find();
+            data = await EventModel.find().sort({$natural: -1}).limit(1);
         } else {
             data = await EventModel.find();
         }
