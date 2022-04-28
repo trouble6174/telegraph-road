@@ -5,14 +5,22 @@ import TaskHeader from "./TaskHeader";
 import TaskList from "./TaskList";
 import TaskAdd from "./TaskAdd";
 import Footer from "./Footer";
-import {todoItems, projects, monitorInfo} from "./mockData";
+import {todoItems, monitorInfo} from "./mockData";
+import {getProjects} from "../utils/requests";
+import {useEffect, useState} from "react";
 
 function App() {
+    const [projects, setProjects] = useState([])
+    useEffect(() => {
+        getProjects().then((data) => {
+            setProjects(data)
+        })
+    }, [])
     return (
         <body className="container">
         <NavBar/>
         <div className="body-container">
-            <ProjectList projects={projects} totalCount={projects.map(p => p.count).reduce((x, y) => x + y)}/>
+            <ProjectList projects={projects} totalCount={projects.length}/>
             <section className="main">
                 <TaskHeader name={"全部"} success={1} total={555}/>
                 <TaskList tasks={todoItems}/>
