@@ -1,0 +1,20 @@
+{
+  "name": "learn-node-socket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app",
+    "compile": "tsc && node app.js",
+    "dev": "nodeman -e ts  --exec \"npm run compile\"",
+    "_comment1": "npm test, npm start, npm restart, and npm stop are all aliases for npm run xxx.",
+    "_comment2": "For all other scripts you define, you need to use the npm run xxx syntax"
+  },
+  "author": "lc",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.0",
+    "nodeman": "^1.1.2"
+  }
+}
