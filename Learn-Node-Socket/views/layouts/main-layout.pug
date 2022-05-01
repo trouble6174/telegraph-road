@@ -1,0 +1,36 @@
+include ../mixins/mixins
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet' href='/css/bootstrap.min.css')
+        link(rel='stylesheet' href='/css/main.css')
+        script(src="/js/bootstrap.min.js" defer) 
+        script(src="/js/jquery-3.6.0.min.js" defer) 
+        script(src="/js/popper.min.js" defer) 
+        script(src="https://kit.fontawesome.com/08521de730.js" crossorigin="anonymous" defer) 
+        title #{pageTile}
+    body
+        .wrapper 
+            .row 
+                nav.col-2
+                    a.blue(href="/")
+                        i.fa-solid.fa-cat
+                    a(href="/")
+                        i.fa-solid.fa-home
+                    a(href="/search")
+                        i.fa-solid.fa-search
+                    a(href="/notifacations")
+                        i.fa-solid.fa-bell
+                    a(href="/messages")
+                        i.fa-solid.fa-envelope
+                    a(href="/profile")
+                        i.fa-solid.fa-user
+                    a(href="/logout")
+                        i.fa-solid.fa-sign-out-alt
+                .mainSectionContainer.col-10.col-md-8.col-lg-6
+                    block content    
+                .d-none.d-md-block.col-md-2.col-lg-4
+                    span third column 
