@@ -25,4 +25,15 @@ package main
 import "fmt"
 
 func main() {
+	var myFavColor = "blue"
+	birthYear, ageInYear := 1987, 34
+	var (
+		firstN = "L"
+		lastN  = "C"
+	)
+	var ageInDays int
+	fmt.Println(myFavColor, birthYear, ageInYear, firstN, lastN)
+	fmt.Println("declared ageDays with default init value", ageInDays)
+	ageInDays = ageInYear * 365
+	fmt.Println("calced ageDays", ageInDays)
 }

@@ -18,6 +18,27 @@ package main
 
 import "fmt"
 
+type Product struct {
+	price int
+	name  string
+}
+
 func main() {
+	shoppingList := [4]Product{}
+	shoppingList[0] = Product{name: "itemA", price: 10}
+	shoppingList[1] = Product{name: "itemB", price: 20}
+	shoppingList[2] = Product{name: "itemC", price: 30}
+	var itemNum, totalCost int
+	for i := 0; i < len(shoppingList); i++ {
+		item := shoppingList[i]
+		if item.name == "" {
+			continue
+		}
+		totalCost += item.price
+		itemNum += 1
+	}
+	fmt.Println("last item", shoppingList[itemNum-1])
+	fmt.Println("total cost", totalCost)
+	fmt.Println("total num", itemNum)
 
 }

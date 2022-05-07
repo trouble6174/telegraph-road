@@ -19,6 +19,30 @@ package main
 
 import "fmt"
 
-func main() {
+func sayHi(name string) {
+	fmt.Println("Hi", name)
+}
 
+func getHiString(name string) string {
+	return "Hi" + name
+}
+
+func addThree(a, b, c int) int {
+	return a + b + c
+}
+
+func returnOne() int {
+	return 1
+}
+
+func returnOneOne() (int, int) {
+	return 1, 1
+}
+
+func main() {
+	sayHi("LC")
+	fmt.Println(getHiString(".."))
+	fmt.Println(addThree(1, 3, 5))
+	fmt.Println(returnOne())
+	fmt.Println(returnOneOne())
 }

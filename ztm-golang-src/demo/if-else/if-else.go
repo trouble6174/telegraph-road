@@ -8,5 +8,8 @@ func average(a, b, c int) float32 {
 }
 
 func main() {
-
+	q1, q2, q3 := 9, 8, 7
+	if average(q1, q2, q3) > 7 {
+		fmt.Println("ok")
+	}
 }
