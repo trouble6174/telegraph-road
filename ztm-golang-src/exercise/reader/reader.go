@@ -18,8 +18,40 @@
 
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"io"
+	"os"
+	"strings"
+)
 
 func main() {
+	reader := bufio.NewReader(os.Stdin)
 
+	// scanner := bufio.NewScanner(os.Stdin)
+	// for scanner.Scan() {
+	// 	fmt.Println(scanner.Text())
+	// }
+
+	fmt.Println(">")
+	responseMap := map[string]string{"hello": "how are you?", "bye": "see you~"}
+	commandCount := 0
+	lineCount := 0
+	for {
+		text, inputErr := reader.ReadString('\n')
+		text = strings.ToLower(strings.TrimSpace(text))
+		if text == "" {
+			continue
+		}
+		if inputErr == io.EOF || text == "q" {
+			break
+		}
+		if res, ok := responseMap[text]; ok {
+			fmt.Println(res)
+			commandCount++
+		}
+		lineCount++
+	}
+	fmt.Printf("The number of non-blank lines entered: %d\nThe number of commands entered: %d\n", commandCount, lineCount)
 }

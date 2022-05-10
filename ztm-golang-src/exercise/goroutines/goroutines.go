@@ -31,9 +31,43 @@ import (
 	"io"
 	"os"
 	"strconv"
+	"strings"
 	"time"
 )
 
+func must(err error) {
+	if err != nil {
+		panic(err)
+	}
+}
+
+func sumFile(rd bufio.Reader) int {
+	res := 0
+	for {
+		line, err := rd.ReadString('\n')
+		if err == io.EOF {
+			return res
+		}
+		must(err)
+		num, _ := strconv.Atoi(strings.TrimSpace(line))
+		if num != 0 {
+			res += num
+		}
+	}
+}
+
 func main() {
 	files := []string{"num1.txt", "num2.txt", "num3.txt", "num4.txt", "num5.txt"}
+	res := 0
+	for i := 0; i < len(files); i++ {
+		file, err := os.Open(files[i])
+		defer file.Close()
+		must(err)
+		rd := bufio.NewReader(file)
+		go func() {
+			res += sumFile(*rd)
+		}()
+	}
+	time.Sleep(100 * time.Millisecond)
+	fmt.Println(res)
 }

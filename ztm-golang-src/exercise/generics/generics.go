@@ -28,9 +28,19 @@ type Velocity float64
 // Mathematically:
 //   min <= value <= max
 
-/*
-func clamp(value, min, max) clamped_value {}
-*/
+type Num interface {
+	~int32 | ~float64 | ~int8 | ~uint32 | ~float32
+}
+
+func clamp[T Num](value, min, max T) T {
+	if value > max {
+		return max
+	} else if value < min {
+		return min
+	} else {
+		return value
+	}
+}
 
 func testClampInt8() {
 	var (
